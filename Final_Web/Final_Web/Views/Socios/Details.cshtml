@@ -1,0 +1,138 @@
+﻿@model Final_Web.Models.Socio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Socio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Foto)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.Foto)" style="height: 180px" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoMembresia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoMembresia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LugarTrabajo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LugarTrabajo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionTrabajo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionTrabajo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonoOficina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoOficina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoMembresia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoMembresia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaSalida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaSalida)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

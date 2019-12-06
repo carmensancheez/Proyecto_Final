@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<table class="table border-1 border-info">
+    <tr class="bg-info">
+        <th>
+            ID
+        </th>
+        <th>
+            EMAIL
+        </th>
+        <th>
+            USERNAME
+        </th>
+    </tr>
+
+    @foreach (var item in ViewData["usuarios"] as IEnumerable<Final_Web.Models.Listas>)
+    {
+        <tr>
+            <td>@item.listaUsuarios.Id/td>
+            <td>@item.listaUsuarios.Email </td>
+
+            <td>@item.listaUsuarios.UserName</td>
+
+
+        </tr>
+
+
+    }
