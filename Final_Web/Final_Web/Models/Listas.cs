@@ -9,5 +9,9 @@ namespace Final_Web.Models
     {
 
         public AspNetUser listaUsuarios { get; set; }
+        public Afiliado listaAfiliados { get; set; }
+
+        public Socio listaSocios { get; set; }
+
     }
 }

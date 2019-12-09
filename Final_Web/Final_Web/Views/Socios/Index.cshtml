@@ -4,114 +4,122 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
+<div class="paddingh2">
+    <div class="styleh2">
+        <h1>Socios</h1>
+    </div>
+</div>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Añadir Nuevo Socio", "Create", "", new { @class = "btn btn-success" })
 </p>
-<table class="table-condensed">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cedula)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Foto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Direccion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sexo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Edad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaNacimiento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TipoMembresia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LugarTrabajo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DireccionTrabajo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TelefonoOficina)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EstadoMembresia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaIngreso)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaSalida)
-        </th>
-        <th></th>
-    </tr>
+<div class="container table-responsive">
+    <table class="table table-striped table-dark">
+        <tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Apellidos)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cedula)
-        </td>
-        <td>
-           <img  src="@Url.Content(item.Foto)" style="height: 140px"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Direccion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sexo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Edad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaNacimiento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TipoMembresia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LugarTrabajo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DireccionTrabajo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TelefonoOficina)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EstadoMembresia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaIngreso)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaSalida)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+            <th>
+                @Html.DisplayName("Nombre")
+            </th>
+            <th>
+                @Html.DisplayName("Apellidos")
+            </th>
+            <th>
+                @Html.DisplayName("Cedula")
+            </th>
+            <th>
+                @Html.DisplayName("Foto")
+            </th>
+            <th>
+                @Html.DisplayName("Direccion")
+            </th>
+            <th>
+                @Html.DisplayName("Sexo")
+            </th>
+            <th>
+                @Html.DisplayName("Edad")
+            </th>
+            <th>
+                @Html.DisplayName("Fecha de Nacimiento")
+            </th>
+            <th>
+                @Html.DisplayName("Tipo de Membresia")
+            </th>
+            <th>
+                @Html.DisplayName("Lugar de Trabajo")
+            </th>
+            <th>
+                @Html.DisplayName("Direccion de Trabajo")
+            </th>
+            <th>
+                @Html.DisplayName("Telefono")
+            </th>
+            <th>
+                @Html.DisplayName("Estado de Membresia")
+            </th>
+            <th>
+                @Html.DisplayName("Fecha de Ingreso")
+            </th>
+            <th>
+                @Html.DisplayName("Fecha de Salida")
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellidos)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    <img src="@Url.Content(item.Foto)" style="height: 140px" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoMembresia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LugarTrabajo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DireccionTrabajo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelefonoOficina)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoMembresia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaIngreso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaSalida)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

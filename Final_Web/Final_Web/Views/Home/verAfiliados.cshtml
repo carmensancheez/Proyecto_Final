@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "verAfiliados";
+}
+    <div class="paddingh1">
+        <div class="styleh2">
+            <h2>Afiliados</h2>
+        </div>
+    </div>
+    <table class="table table-striped table-dark">
+        <tr>
+
+            <th class="text-center">Nombre</th>
+            <th class="text-center">Apellido</th>
+            <th class="text-center">Socio</th>
+           
+        </tr>
+        @foreach (var item in ViewData["Afiliados"] as IEnumerable<Final_Web.Models.Listas>)
+        {
+            <tr>
+
+                <td class="text-center"> @item.listaAfiliados.Nombre  </td>
+                <td class="text-center">@item.listaAfiliados.Apellidos </td>
+                <td class="text-center">@item.listaAfiliados.idSocio</td>
+        
+            </tr>
+
+        }
+
+
+    </table>
+
+        </div>

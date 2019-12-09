@@ -22,3 +22,24 @@ select,
 textarea {
     max-width: 280px;
 }
+.table {
+    margin: auto;
+    width: 50% !important;
+}
+
+.paddingh2 {
+    padding-left: 20px;
+    padding-top: 50px;
+    padding-bottom:20px;
+}
+.paddingh1 {
+    padding-left: 500px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.styleh2 {
+    background-color: gray;
+    display: inline-block;
+    color: white;
+}
+
